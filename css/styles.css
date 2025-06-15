@@ -144,7 +144,7 @@ main {
     height: calc(100vw * (471 / 1148));
     justify-content: center; /* 水平方向の中央揃え */
     position: relative;
-    margin: 0 auto; 左右のマージンを自動調整して中央配置
+    margin: 0 auto; /* 左右のマージンを自動調整して中央配置 */
 
 }
 
@@ -301,11 +301,15 @@ footer p {
     text-decoration: none;
 }
 
-@media (min-width: 769px) {
-     
-    /* nav li {
-        width: 20%;
-    } */
+@media (min-width: 1025px) {
+    
+    .service-box {
+        flex: 1 1 calc(25% - 20px); /* 横1行に4つ */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
     .main-visual-contents h1{
         font-size: 2em;
     }
@@ -317,25 +321,13 @@ footer p {
     .service-box {
         flex: 1 1 calc(25% - 20px); /* 横1行に4つ */
     }
-
-    /* .service-box-overlay > h3 {
-        font-size: 20px;
-    } */
 }
 
 @media (min-width: 427px) and (max-width: 768px) {
-    
-    /* nav li {
-        width: 30%;
-    } */
 
     .service-box {
         flex: 1 1 calc(50% - 20px); /* 横2行に2つずつ */
     }
-
-    /* .service-box-overlay > h3 {
-        font-size: 20px;
-    } */
     
     .main-visual-contents h1{
         font-size: 2em;
