@@ -124,6 +124,7 @@ nav li:hover{
 nav a {
     color: var(--text-color-basic);
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
@@ -133,21 +134,25 @@ main {
 
 .main-visual {
     align-items: center;  /* 垂直方向の中央揃え */
-    background-image: url(https://images.unsplash.com/photo-1594028885044-62c27d701440?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cGlhbm8lMjBrZXl8ZW58MHx8fHwxNzM4Njc3MjMwfDA&ixlib=rb-4.0.3&q=80&w=1080);
+    /* background-image: url(https://images.unsplash.com/photo-1594028885044-62c27d701440?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cGlhbm8lMjBrZXl8ZW58MHx8fHwxNzM4Njc3MjMwfDA&ixlib=rb-4.0.3&q=80&w=1080); */
+    background-image: url(../images/main-visual.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    height: 300px;
+    width: 100%;
+    height: calc(100vw * (471 / 1148));
     justify-content: center; /* 水平方向の中央揃え */
     position: relative;
-    width: 100%;
+    margin: 0 auto; 左右のマージンを自動調整して中央配置
+
 }
 
 .main-visual-overlay {
     height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
 }
 
@@ -159,9 +164,22 @@ main {
 .main-visual-contents h1{
     color: black;
     /* font-family: "Noto Serif JP", serif; */
-    font-weight: normal;
-    /* font-size: 70px; */
-    font-size: 350%;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    margin-right: 0.2vw; /* letter-spacing の分だけ負のマージンを適用 */
+}
+
+.main-visual-contents h2{
+    color: black;
+    /* font-family: "Noto Serif JP", serif; */
+    font-size: 100%;
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 0.2vw; 
 }
 
 .main-visual-contents button {
@@ -288,6 +306,13 @@ footer p {
     /* nav li {
         width: 20%;
     } */
+    .main-visual-contents h1{
+        font-size: 2em;
+    }
+
+    .main-visual-contents h2{
+        font-size: 0.6em;
+    }
     
     .service-box {
         flex: 1 1 calc(25% - 20px); /* 横1行に4つ */
@@ -311,6 +336,15 @@ footer p {
     /* .service-box-overlay > h3 {
         font-size: 20px;
     } */
+    
+    .main-visual-contents h1{
+        font-size: 2em;
+    }
+
+    .main-visual-contents h2{
+        font-size: 0.6em;
+    }
+
 }
 
 @media (max-width: 426px) {
@@ -342,9 +376,30 @@ footer p {
         padding-top: calc(var(--header-height) - var(--header-height-mobile-minus));
     }
 
-    .main-visual-contents h1{
-        font-size: 33px;
+    .main-visual {
+        background-image: url(../images/main-visual_mobile.png);
+        height: calc(100vw * (302 / 423));
     }
+
+    .main-visual-contents h1{
+        font-size: 1.8em;
+    }
+
+    .main-visual-contents h2{
+        font-size: 0.6em;
+    }
+
+    .greeting {
+        margin-top: 40px;
+        padding: 0 var(--padding-left-light);
+    }
+    
+    .greeting p {
+        margin: 0; /* 不要な余白を削除 */
+        padding: 0px var(--padding-left-light); /* 上下の余白を調整 */
+        text-align: left;
+    }
+
 
     .services {
         flex-direction: column;
