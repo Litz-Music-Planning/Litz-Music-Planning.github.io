@@ -370,7 +370,7 @@ footer p {
 
     .main-visual {
         background-image: url(../images/main-visual_mobile.png);
-        height: calc(100vw * (302 / 423));
+        height: 100vw;
     }
 
     .main-visual-contents h1{
