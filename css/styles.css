@@ -370,15 +370,15 @@ footer p {
 
     .main-visual {
         background-image: url(../images/main-visual_mobile.png);
-        height: calc(100vw * (302 / 423));
+        height: 100vw;
     }
 
     .main-visual-contents h1{
-        font-size: 1.8em;
+        font-size: 2.4em;
     }
 
     .main-visual-contents h2{
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     .greeting {
